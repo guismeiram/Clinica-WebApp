@@ -2,6 +2,8 @@
 {
     public class Paciente : Entity
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
+
+        public Consulta? Consulta { get; set; }
     }
 }

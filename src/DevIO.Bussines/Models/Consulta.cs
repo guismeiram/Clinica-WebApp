@@ -10,9 +10,12 @@ namespace DevIO.Bussines.Models
     {
         public int MedicoId { get; set; }
         public int ConsultorioId { get; set; }
-        public virtual ICollection<Medico> Medico { get; set; }
-        public virtual ICollection<Consultorio> Consultorio { get; set; }
 
-        public virtual Paciente Paciente { get; set; }
+        public Guid PacienteId { get; set; }
+        public virtual Medico? Medico { get; set; }
+
+        public virtual Consultorio? Consultorios { get; set; }
+
+        public virtual Paciente? Paciente { get; set; }
     }
 }
