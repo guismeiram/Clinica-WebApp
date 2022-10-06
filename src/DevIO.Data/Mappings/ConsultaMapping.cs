@@ -19,6 +19,7 @@ namespace DevIO.Data.Mappings
             // 1 : 1 => Paciente : Medico
             builder.HasOne(f => f.Paciente)
                 .WithOne(e => e.Consulta);
+          
 
             // 1 : N => Consultorios : Consulta
             builder.HasMany(c => c.Medicos)
