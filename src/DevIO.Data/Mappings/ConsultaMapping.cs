@@ -20,7 +20,15 @@ namespace DevIO.Data.Mappings
             builder.HasOne(f => f.Paciente)
                 .WithOne(e => e.Consulta);
 
-            
+            // 1 : N => Consultorios : Consulta
+            builder.HasMany(c => c.Medicos)
+                .WithOne(n => n.Consultas)
+                .HasForeignKey(n => n.ConsultaId);
+
+            // 1 : N => Consultorios : Consulta
+            builder.HasMany(c => c.Consultorios)
+                .WithOne(n => n.Consultas)
+                .HasForeignKey(c => c.ConsultaId);
 
             builder.ToTable("Consulta");
         }
