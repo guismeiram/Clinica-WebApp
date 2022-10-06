@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Notificacoes\" />
-    <Folder Include="Services\" />
+    <Compile Remove="Notificacoes\**" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Notificacoes\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Notificacoes\**" />
+    <None Remove="Services\**" />
   </ItemGroup>
 
 </Project>

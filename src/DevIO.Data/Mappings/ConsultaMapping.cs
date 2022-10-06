@@ -20,6 +20,7 @@ namespace DevIO.Data.Mappings
             builder.HasOne(f => f.Paciente)
                 .WithOne(e => e.Consulta);
 
+            
 
             builder.ToTable("Consulta");
         }
