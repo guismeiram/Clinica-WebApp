@@ -5,6 +5,8 @@
         public string? Numero { get; set; }
         public DateTime Data_Hora { get; set; }
 
-        public virtual IEnumerable<Consulta>? Consulta { get; set; }
+        public virtual ICollection<Consulta>? Consulta { get; set; }
+
+        
     }
 }

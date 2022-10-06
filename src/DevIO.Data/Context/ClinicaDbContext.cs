@@ -16,10 +16,11 @@ namespace DevIO.Data.Context
             ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
-        public DbSet<Consulta> Consulta { get; set; }
-        public DbSet<Consultorio> Consultorio { get; set; }
-        public DbSet<Medico> Medico { get; set; }
-        public DbSet<Paciente> Paciente { get; set; }
+        public DbSet<Consulta>? Consulta { get; set; }
+        public DbSet<Consultorio>? Consultorio { get; set; }
+        public DbSet<Medico>? Medico { get; set; }
+        public DbSet<Paciente>? Paciente { get; set; }
+        public DbSet<Especialidade>? Especialidade { get; set; }    
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

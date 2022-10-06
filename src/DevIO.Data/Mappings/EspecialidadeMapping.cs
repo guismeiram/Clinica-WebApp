@@ -9,19 +9,17 @@ using System.Threading.Tasks;
 
 namespace DevIO.Data.Mappings
 {
-    public class PacienteMapping : IEntityTypeConfiguration<Paciente>
+    public class EspecialidadeMapping : IEntityTypeConfiguration<Especialidade>
     {
-       
-
-        public void Configure(EntityTypeBuilder<Paciente> builder)
+        public void Configure(EntityTypeBuilder<Especialidade> builder)
         {
             builder.HasKey(p => p.Id);
 
-            builder.Property(c => c.Name)
+            builder.Property(c => c.Especialidades)
                 .IsRequired()
                 .HasColumnType("varchar(200)");
 
-            builder.ToTable("Enderecos");
+            builder.ToTable("Consulta");
         }
     }
 }

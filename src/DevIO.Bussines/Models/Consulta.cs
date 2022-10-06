@@ -8,8 +8,8 @@ namespace DevIO.Bussines.Models
 {
     public class Consulta : Entity
     {
-        public int MedicoId { get; set; }
-        public int ConsultorioId { get; set; }
+        public Guid MedicoId { get; set; }
+        public Guid ConsultorioId { get; set; }
 
         public Guid PacienteId { get; set; }
         public virtual Medico? Medico { get; set; }

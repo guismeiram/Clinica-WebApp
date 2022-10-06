@@ -23,18 +23,21 @@ namespace DevIO.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(50)");
 
-            builder.Property(c => c.Especialidade)
-                .IsRequired()
-                .HasColumnType("varchar(8)");
+         
 
             builder.Property(c => c.Crm)
                 .HasColumnType("varchar(250)");
 
+            //1 : N Especialidade : Medico
             builder.HasMany(e => e.Especialidade)
                 .WithOne(m => m.Medico)
                 .HasForeignKey(m => m.MedicoId);
-            
 
+            // 1 : N => Consultorios : Consulta
+            builder.HasMany(c => c.Consultas)
+                .WithOne(n => n.Medico)
+                .HasForeignKey(n => n.MedicoId);
+                
 
             builder.ToTable("Medico");
         }
