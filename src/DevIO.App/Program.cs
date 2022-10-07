@@ -1,13 +1,7 @@
 using DevIO.Data.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-
-app.MapGet("/", () => "Hello World!");
-
-app.Run();
 
 builder.Configuration
     .SetBasePath(builder.Environment.ContentRootPath)
@@ -17,4 +11,10 @@ builder.Configuration
 
 builder.Services.AddDbContext<ClinicaDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+var app = builder.Build();
+
+app.MapGet("/", () => "Hello World!");
+
+app.Run();
 

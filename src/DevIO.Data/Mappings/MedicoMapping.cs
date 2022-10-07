@@ -26,13 +26,10 @@ namespace DevIO.Data.Mappings
             builder.Property(c => c.Crm)
                 .HasColumnType("varchar(250)");
 
-            //1 : N Especialidade : Medico
-            builder.HasMany(e => e.Especialidade)
-                .WithOne(m => m.Medicos)
-                .HasForeignKey(m => m.MedicoId).OnDelete(DeleteBehavior.Restrict);
-
-
-
+            //1 : N Medico : Especialidades
+            builder.HasMany(e => e.Especialidades)
+                .WithOne(m => m.Medico)
+                .HasForeignKey(m => m.MedicoId);
 
             builder.ToTable("Medico");
         }

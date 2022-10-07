@@ -13,13 +13,12 @@ namespace DevIO.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<Especialidade> builder)
         {
-            builder.HasKey(p => p.Id);
+            builder.HasKey(prop => prop.Id);
 
-            builder.Property(c => c.Especialidades)
-                .IsRequired()
-                .HasColumnType("varchar(200)");
-
-            builder.ToTable("Consulta");
+            //1 : N Especialidade : Medicos
+            builder.HasMany(e => e.Medicos)
+                .WithOne(m => m.Especialidade)
+                .HasForeignKey(m => m.EspecialidadeId);
         }
     }
 }
