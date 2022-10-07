@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevIO.Data.Migrations
 {
     [DbContext(typeof(ClinicaDbContext))]
-    [Migration("20221007210649_Initial")]
+    [Migration("20221007213113_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,11 +54,18 @@ namespace DevIO.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(100)");
 
+                    b.Property<string>("PacienteId")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ClinicaId");
 
                     b.HasIndex("MedicoId");
+
+                    b.HasIndex("PacienteId")
+                        .IsUnique();
 
                     b.ToTable("Consulta");
                 });
@@ -135,7 +142,20 @@ namespace DevIO.Data.Migrations
 
                     b.HasIndex("MedicoId");
 
-                    b.ToTable("MedicoEspecialidades");
+                    b.ToTable("MedicoEspecialidade");
+                });
+
+            modelBuilder.Entity("DevIO.Bussines.Models.Paciente", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("varchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Paciente");
                 });
 
             modelBuilder.Entity("DevIO.Bussines.Models.Consulta", b =>
@@ -152,9 +172,17 @@ namespace DevIO.Data.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("DevIO.Bussines.Models.Paciente", "Paciente")
+                        .WithOne("Consulta")
+                        .HasForeignKey("DevIO.Bussines.Models.Consulta", "PacienteId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("Clinica");
 
                     b.Navigation("Medico");
+
+                    b.Navigation("Paciente");
                 });
 
             modelBuilder.Entity("DevIO.Bussines.Models.Endereco", b =>
@@ -205,6 +233,11 @@ namespace DevIO.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Especialidades");
+                });
+
+            modelBuilder.Entity("DevIO.Bussines.Models.Paciente", b =>
+                {
+                    b.Navigation("Consulta");
                 });
 #pragma warning restore 612, 618
         }
