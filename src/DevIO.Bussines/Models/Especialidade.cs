@@ -9,10 +9,7 @@ namespace DevIO.Bussines.Models
     public class Especialidade : Entity
     {
         public string? Especialidades { get; set; }
-
-        public Medico? Medico { get; set; }
-
+        public Medico? Medicos{ get; set; }
         public Guid MedicoId { get; set; }
-
     }
 }
