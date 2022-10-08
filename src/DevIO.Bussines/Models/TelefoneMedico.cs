@@ -8,5 +8,11 @@ namespace DevIO.Bussines.Models
 {
     public class TelefoneMedico : Entity
     {
+        public string MedicoId { get; set; }
+        public string TelefoneId { get; set; }
+
+        // relacionamentos
+        public virtual Telefone Telefone { get; set; }
+        public virtual Medico Medico { get; set; }
     }
 }

@@ -12,5 +12,7 @@ namespace DevIO.Bussines.Models
 
         // relacionamentos
         public virtual List<Consulta> Consultas { get; set; }
+
+        public virtual List<TelefoneClinica> TelefoneClinicas { get; set; }
     }
 }

@@ -10,5 +10,7 @@
         public virtual Endereco Endereco { get; set; }
         public virtual List<Consulta> Consultas { get; set; }
         public virtual List<MedicoEspecialidade> Especialidades { get; set; }
+        public virtual List<TelefoneMedico> TelefoneMedicos { get; set; }
+
     }
 }
