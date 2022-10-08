@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Clinica.Teste
+namespace ClinicaTeste
 {
     [TestClass]
     public class UnitTest1
