@@ -18,6 +18,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\DevIO.Bussines\DevIO.Bussines.csproj" />
+	  <ProjectReference Include="..\DevIO.Bussines\DevIO.Bussines.csproj" />
 	</ItemGroup>
 </Project>
