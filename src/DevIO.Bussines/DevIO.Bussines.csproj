@@ -15,4 +15,8 @@
     <None Remove="Services\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Models\ythk4dfn.ryc~" />
+  </ItemGroup>
+
 </Project>
