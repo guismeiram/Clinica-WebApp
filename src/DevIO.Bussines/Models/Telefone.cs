@@ -11,6 +11,11 @@ namespace DevIO.Bussines.Models
         public string ddd { get; set; }
         public string numero { get; set; }
         public virtual List<TelefoneClinica> TelefoneClinicas { get; set; }
+        public virtual List<TelefoneMedico> TelefoneMedicos { get; set; }
+        public virtual List<TelefonePaciente> TelefonePacientes { get; set; }
+
+
+
 
     }
 }

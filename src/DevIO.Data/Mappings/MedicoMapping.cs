@@ -31,6 +31,11 @@ namespace DevIO.Data.Mappings
                 .WithOne(m => m.Medico)
                 .HasForeignKey(m => m.MedicoId);
 
+            //1 : N Medico : Telefone
+            builder.HasMany(e => e.TelefoneMedicos)
+                .WithOne(m => m.Medico)
+                .HasForeignKey(m => m.MedicoId);
+
             builder.ToTable("Medico");
         }
     }

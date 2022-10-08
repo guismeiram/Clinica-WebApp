@@ -20,6 +20,12 @@ namespace DevIO.Data.Mappings
                 .WithOne(m => m.Clinica)
                 .HasForeignKey(m => m.ClinicaId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+
+            //1 : N Medico : Especialidades
+            builder.HasMany(e => e.TelefoneClinicas)
+                .WithOne(m => m.Clinica)
+                .HasForeignKey(m => m.ClinicaId);
         }
     }
 }
