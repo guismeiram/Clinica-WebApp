@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevIO.Bussines.Models.Validations
 {
-    internal class MedicoEspecialidadeValidation
+    public class MedicoEspecialidadeValidation
     {
     }
 }
