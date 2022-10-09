@@ -19,3 +19,4 @@ Como baixar este projeto?<br>
 Ferramentas para teste ou codificação:<br>
 -Visual Studio 2022<br>
 -Microsoft Sql Server<br>
+-.NET CORE 6
