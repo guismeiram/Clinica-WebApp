@@ -8,3 +8,14 @@ Este projeto tem objetivo de estudos e graduação de conhecimento.<br>
 -DevIO.Bussines: Logica de negocio<br>
 -DevIO.App: Camada de Views<br>
 -DevIO.Data: Camada de interação com banco de dados.
+
+O que foi utilizado no projeto?(Este projeto esta começando)
+-Entity Framework
+-Fluent Api
+
+Como baixar este projeto?
+-git clone https://github.com/guismeiram/Clinica-WebApp
+
+Ferramentas para teste ou codificação:
+-Visual Studio 2022
+-Microsoft Sql Server
