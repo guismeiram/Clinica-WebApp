@@ -2,7 +2,7 @@
 {
     public class Medico : Entity
     {
-        public string Name { get; set; }
+        public string Nome { get; set; }
         public string Crm { get; set; }
         public int Idade { get; set; }
 

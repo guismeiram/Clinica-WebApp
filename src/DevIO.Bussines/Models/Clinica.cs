@@ -8,11 +8,15 @@ namespace DevIO.Bussines.Models
 {
     public class Clinica : Entity
     {
-        public string Name { get; set; }
+        public string Nome { get; set; }
+        
 
         // relacionamentos
         public virtual List<Consulta> Consultas { get; set; }
 
         public virtual List<TelefoneClinica> TelefoneClinicas { get; set; }
+
+        public virtual Endereco Endereco { get; set; }
+
     }
 }

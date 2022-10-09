@@ -3,6 +3,6 @@
     public enum Pagamento
     {
         Dinheiro,
-        cartão
+        Cartão
     }
 }

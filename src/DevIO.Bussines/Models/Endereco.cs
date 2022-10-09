@@ -18,5 +18,8 @@ namespace DevIO.Bussines.Models
         // relacionamentos
         public virtual Medico Medico { get; set; }
 
+        public virtual Clinica Clinica { get; set; }
+
+
     }
 }
