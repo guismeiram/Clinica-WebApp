@@ -13,7 +13,13 @@ namespace DevIO.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<TipoPagamento> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(p => p.Id);
+
+
+            //1 : N Convenio : Paciente
+            builder.HasMany(e => e.PacienteTipoPagamentos)
+                .WithOne(m => m.TipoPagamento)
+                .HasForeignKey(m => m.TipoPagamentoId);
         }
     }
 }

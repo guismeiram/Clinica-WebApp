@@ -10,5 +10,8 @@ namespace DevIO.Bussines.Models
     {
         public Pagamento Pagamentos { get; set; }
         public Convenio Convenios { get; set; }
+
+        public virtual List<PacienteTipoPagamento> PacienteTipoPagamentos { get; set; }
+
     }
 }

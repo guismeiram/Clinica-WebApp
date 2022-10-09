@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DevIO.Bussines.Models
 {
-    public class PacienteConvenio : Entity
+    public class PacienteTipoPagamento : Entity
     {
         public string PacienteId { get; set; }
-        public string ConvenioId { get; set; }
+        public string TipoPagamentoId { get; set; }
 
         // relacionamentos
         public virtual Paciente Paciente { get; set; }
-        public virtual Convenio Convenio { get; set; }
+        public virtual TipoPagamento TipoPagamento { get; set; }
     }
 }

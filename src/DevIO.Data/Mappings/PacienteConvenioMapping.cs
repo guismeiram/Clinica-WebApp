@@ -1,4 +1,5 @@
-﻿using DevIO.Bussines.Models;
+﻿using DevIO.Bussines;
+using DevIO.Bussines.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

@@ -14,6 +14,7 @@ namespace DevIO.Bussines.Models
         public string Estado { get; set; }
         public string Pais { get; set; }
         public string MedicoId { get; set; }
+        public string EnderecoId { get; set; }
 
         // relacionamentos
         public virtual Medico Medico { get; set; }

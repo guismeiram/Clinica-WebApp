@@ -18,5 +18,7 @@ namespace DevIO.Bussines.Models
 
         public virtual Endereco Endereco { get; set; }
 
+        public String ClinicaId { get; set; }
+
     }
 }

@@ -26,10 +26,7 @@ namespace DevIO.Data.Mappings
             builder.Property(c => c.Vencimento)
                 .HasColumnType("varchar(250)");
 
-            //1 : N Paciente : Convenio
-            builder.HasMany(e => e.PacienteConvenio)
-                .WithOne(m => m.Convenio)
-                .HasForeignKey(m => m.ConvenioId);
+            
         }
     }
 }

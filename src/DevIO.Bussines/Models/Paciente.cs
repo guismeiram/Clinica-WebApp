@@ -12,9 +12,10 @@ namespace DevIO.Bussines.Models
         public string Idade { get; set; }
         public String Rg { get; set; }
         public String Cpf { get; set; }
-        public List<PacienteConvenio> PacienteConvenio { get; set; }
         public Consulta Consulta { get; set; }
         public virtual List<TelefonePaciente> TelefonePacientes { get; set; }
+        public virtual List<PacienteTipoPagamento> PacienteTipoPagamentos { get; set; }
+
 
     }
 }

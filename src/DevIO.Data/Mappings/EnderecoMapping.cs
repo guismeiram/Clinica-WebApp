@@ -18,6 +18,11 @@ namespace DevIO.Data.Mappings
             //1 : 1 Endereco : Medico
             builder.HasOne(e => e.Medico)
                 .WithOne(m => m.Endereco);
+
+            //1 : 1 Clinica : Endereco
+            builder.HasOne(e => e.Clinica)
+                .WithOne(m => m.Endereco)
+                .HasForeignKey<Clinica>(c => c.ClinicaId);
         }
     }
 }

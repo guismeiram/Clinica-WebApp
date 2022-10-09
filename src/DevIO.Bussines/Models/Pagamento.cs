@@ -1,6 +1,6 @@
 ﻿namespace DevIO.Bussines.Models
 {
-    public enum Pagamento
+    public enum Pagamento 
     {
         Dinheiro,
         Cartão
