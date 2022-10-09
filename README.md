@@ -16,6 +16,6 @@ O que foi utilizado no projeto?(Este projeto esta começando)<br>
 Como baixar este projeto?<br>
 -git clone https://github.com/guismeiram/Clinica-WebApp<br>
 
-Ferramentas para teste ou codificação:
+Ferramentas para teste ou codificação:<br>
 -Visual Studio 2022<br>
 -Microsoft Sql Server<br>
