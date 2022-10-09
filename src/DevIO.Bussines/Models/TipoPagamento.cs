@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace DevIO.Bussines.Models
 {
-    public class Especialidade : Entity
+    public class TipoPagamento : Entity
     {
-        public string Nome { get; set; }
-        public virtual List<MedicoEspecialidade> Medicos { get; set; }
-
+        public Pagamento Pagamentos { get; set; }
+        public Convenio Convenio { get; set; }
     }
 }

@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIO.Bussines", "src\DevIO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIO.Data", "src\DevIO.Data\DevIO.Data.csproj", "{8A4691BC-3093-4E30-B057-FDAE44628F68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaTeste", "testes\Clinica.Teste\ClinicaTeste.csproj", "{E6B6AD80-0D14-42D8-B9F7-8435A0DD09D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaTeste", "testes\ClinicaTeste\ClinicaTeste.csproj", "{E6B6AD80-0D14-42D8-B9F7-8435A0DD09D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
