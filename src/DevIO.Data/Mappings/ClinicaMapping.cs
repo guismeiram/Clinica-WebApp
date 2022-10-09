@@ -26,6 +26,10 @@ namespace DevIO.Data.Mappings
             builder.HasMany(e => e.TelefoneClinicas)
                 .WithOne(m => m.Clinica)
                 .HasForeignKey(m => m.ClinicaId);
+
+            //1 : 1 Clinica : Endereco
+            builder.HasOne(e => e.Endereco)
+                .WithOne(m => m.Clinica);
         }
     }
 }

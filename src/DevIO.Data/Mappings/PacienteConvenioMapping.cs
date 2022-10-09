@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 
 namespace DevIO.Data.Mappings
 {
-    public class TipoPagamentoMapping : IEntityTypeConfiguration<TipoPagamento>
+    public class PacienteConvenioMapping : IEntityTypeConfiguration<PacienteConvenio>
     {
-        public void Configure(EntityTypeBuilder<TipoPagamento> builder)
+        public void Configure(EntityTypeBuilder<PacienteConvenio> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(p => p.Id);
+
+
         }
     }
 }

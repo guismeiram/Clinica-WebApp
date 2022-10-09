@@ -9,6 +9,6 @@ namespace DevIO.Bussines.Models
     public class TipoPagamento : Entity
     {
         public Pagamento Pagamentos { get; set; }
-        public Convenio Convenio { get; set; }
+        public Convenio Convenios { get; set; }
     }
 }

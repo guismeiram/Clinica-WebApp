@@ -5,5 +5,8 @@
         public String Nome { get; set; }
         public String NCarteira { get; set; }
         public DateTime Vencimento { get; set; }
+
+        public List<PacienteConvenio> PacienteConvenio { get; set; }
+
     }
 }
