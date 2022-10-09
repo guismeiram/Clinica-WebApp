@@ -21,3 +21,6 @@ O projeto é feito em c#. E é constituido por camadas com libs no Padrão MVC, 
 -Visual Studio 2022<br>
 -Microsoft Sql Server<br>
 -.NET CORE 6
+
+Como gerar o banco:
+-Update-DataBase
