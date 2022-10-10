@@ -31,10 +31,13 @@ namespace DevIO.Data.Mappings
                 .WithOne(m => m.Medico)
                 .HasForeignKey(m => m.MedicoId);
 
-            //1 : N Medico : Telefone
-            builder.HasMany(e => e.TelefoneMedicos)
-                .WithOne(m => m.Medico)
-                .HasForeignKey(m => m.MedicoId);
+            builder.Property(c => c.Telefone)
+                .IsRequired()
+                .HasColumnType("varchar(200)");
+
+            builder.Property(c => c.Ddd)
+                .IsRequired()
+                .HasColumnType("varchar(200)");
 
             builder.ToTable("Medico");
         }

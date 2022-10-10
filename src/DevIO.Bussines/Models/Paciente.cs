@@ -13,7 +13,8 @@ namespace DevIO.Bussines.Models
         public String Rg { get; set; }
         public String Cpf { get; set; }
         public Consulta Consulta { get; set; }
-        public virtual List<TelefonePaciente> TelefonePacientes { get; set; }
+        public string Telefone { get; set; }
+        public string Ddd { get; set; }
         public virtual List<PacienteTipoPagamento> PacienteTipoPagamentos { get; set; }
 
 

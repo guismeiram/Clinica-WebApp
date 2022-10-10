@@ -9,12 +9,12 @@ namespace DevIO.Bussines.Models
     public class Clinica : Entity
     {
         public string Nome { get; set; }
-        
+        public string Telefone { get; set; }
+        public string Ddd { get; set; }
 
         // relacionamentos
         public virtual List<Consulta> Consultas { get; set; }
 
-        public virtual List<TelefoneClinica> TelefoneClinicas { get; set; }
 
         public virtual Endereco Endereco { get; set; }
 

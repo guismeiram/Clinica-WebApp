@@ -42,7 +42,9 @@ namespace DevIO.Data.Migrations
                     Id = table.Column<string>(type: "varchar(100)", nullable: false),
                     Nome = table.Column<string>(type: "varchar(200)", nullable: false),
                     Crm = table.Column<string>(type: "varchar(250)", nullable: false),
-                    Idade = table.Column<string>(type: "varchar(50)", nullable: false)
+                    Idade = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Telefone = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Ddd = table.Column<string>(type: "varchar(200)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -57,42 +59,13 @@ namespace DevIO.Data.Migrations
                     Name = table.Column<string>(type: "varchar(100)", nullable: false),
                     Idade = table.Column<string>(type: "varchar(100)", nullable: false),
                     Rg = table.Column<string>(type: "varchar(100)", nullable: false),
-                    Cpf = table.Column<string>(type: "varchar(100)", nullable: false)
+                    Cpf = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Telefone = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Ddd = table.Column<string>(type: "varchar(200)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Paciente", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Telefone",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "varchar(100)", nullable: false),
-                    ddd = table.Column<string>(type: "varchar(100)", nullable: false),
-                    numero = table.Column<string>(type: "varchar(100)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Telefone", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PacienteConvenio",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "varchar(100)", nullable: false),
-                    ConvenioId = table.Column<string>(type: "varchar(100)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PacienteConvenio", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_PacienteConvenio_Convenio_ConvenioId",
-                        column: x => x.ConvenioId,
-                        principalTable: "Convenio",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -164,56 +137,6 @@ namespace DevIO.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TelefoneMedico",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "varchar(100)", nullable: false),
-                    MedicoId = table.Column<string>(type: "varchar(100)", nullable: false),
-                    TelefoneId = table.Column<string>(type: "varchar(100)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TelefoneMedico", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_TelefoneMedico_Medico_MedicoId",
-                        column: x => x.MedicoId,
-                        principalTable: "Medico",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_TelefoneMedico_Telefone_TelefoneId",
-                        column: x => x.TelefoneId,
-                        principalTable: "Telefone",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "TelefonePaciente",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "varchar(100)", nullable: false),
-                    PacienteId = table.Column<string>(type: "varchar(100)", nullable: false),
-                    TelefoneId = table.Column<string>(type: "varchar(100)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TelefonePaciente", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_TelefonePaciente_Paciente_PacienteId",
-                        column: x => x.PacienteId,
-                        principalTable: "Paciente",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_TelefonePaciente_Telefone_TelefoneId",
-                        column: x => x.TelefoneId,
-                        principalTable: "Telefone",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "PacienteTipoPagamento",
                 columns: table => new
                 {
@@ -244,6 +167,8 @@ namespace DevIO.Data.Migrations
                 {
                     Id = table.Column<string>(type: "varchar(100)", nullable: false),
                     Nome = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Telefone = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Ddd = table.Column<string>(type: "varchar(200)", nullable: false),
                     ClinicaId = table.Column<string>(type: "varchar(100)", nullable: false)
                 },
                 constraints: table =>
@@ -290,31 +215,6 @@ namespace DevIO.Data.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "TelefoneClinica",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "varchar(100)", nullable: false),
-                    ClinicaId = table.Column<string>(type: "varchar(100)", nullable: false),
-                    TelefoneId = table.Column<string>(type: "varchar(100)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TelefoneClinica", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_TelefoneClinica_Clinica_ClinicaId",
-                        column: x => x.ClinicaId,
-                        principalTable: "Clinica",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_TelefoneClinica_Telefone_TelefoneId",
-                        column: x => x.TelefoneId,
-                        principalTable: "Telefone",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_Clinica_ClinicaId",
                 table: "Clinica",
@@ -354,11 +254,6 @@ namespace DevIO.Data.Migrations
                 column: "MedicoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PacienteConvenio_ConvenioId",
-                table: "PacienteConvenio",
-                column: "ConvenioId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_PacienteTipoPagamento_PacienteId",
                 table: "PacienteTipoPagamento",
                 column: "PacienteId");
@@ -367,36 +262,6 @@ namespace DevIO.Data.Migrations
                 name: "IX_PacienteTipoPagamento_TipoPagamentoId",
                 table: "PacienteTipoPagamento",
                 column: "TipoPagamentoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TelefoneClinica_ClinicaId",
-                table: "TelefoneClinica",
-                column: "ClinicaId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TelefoneClinica_TelefoneId",
-                table: "TelefoneClinica",
-                column: "TelefoneId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TelefoneMedico_MedicoId",
-                table: "TelefoneMedico",
-                column: "MedicoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TelefoneMedico_TelefoneId",
-                table: "TelefoneMedico",
-                column: "TelefoneId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TelefonePaciente_PacienteId",
-                table: "TelefonePaciente",
-                column: "PacienteId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TelefonePaciente_TelefoneId",
-                table: "TelefonePaciente",
-                column: "TelefoneId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TipoPagamento_ConveniosId",
@@ -413,40 +278,25 @@ namespace DevIO.Data.Migrations
                 name: "MedicoEspecialidade");
 
             migrationBuilder.DropTable(
-                name: "PacienteConvenio");
-
-            migrationBuilder.DropTable(
                 name: "PacienteTipoPagamento");
-
-            migrationBuilder.DropTable(
-                name: "TelefoneClinica");
-
-            migrationBuilder.DropTable(
-                name: "TelefoneMedico");
-
-            migrationBuilder.DropTable(
-                name: "TelefonePaciente");
-
-            migrationBuilder.DropTable(
-                name: "Especialidade");
-
-            migrationBuilder.DropTable(
-                name: "TipoPagamento");
 
             migrationBuilder.DropTable(
                 name: "Clinica");
 
             migrationBuilder.DropTable(
+                name: "Especialidade");
+
+            migrationBuilder.DropTable(
                 name: "Paciente");
 
             migrationBuilder.DropTable(
-                name: "Telefone");
-
-            migrationBuilder.DropTable(
-                name: "Convenio");
+                name: "TipoPagamento");
 
             migrationBuilder.DropTable(
                 name: "Endereco");
+
+            migrationBuilder.DropTable(
+                name: "Convenio");
 
             migrationBuilder.DropTable(
                 name: "Medico");

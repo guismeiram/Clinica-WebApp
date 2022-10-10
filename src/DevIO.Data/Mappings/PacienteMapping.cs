@@ -14,7 +14,13 @@ namespace DevIO.Data.Mappings
         public void Configure(EntityTypeBuilder<Paciente> builder)
         {
             builder.HasKey(p => p.Id);
+            builder.Property(c => c.Telefone)
+            .IsRequired()
+            .HasColumnType("varchar(200)");
 
+            builder.Property(c => c.Ddd)
+                .IsRequired()
+                .HasColumnType("varchar(200)");
             //1 : 1 Endereco : Medico
             builder.HasOne(e => e.Consulta)
                 .WithOne(m => m.Paciente);
