@@ -13,7 +13,6 @@ O projeto é feito em c#. E é constituido por camadas com libs no Padrão MVC, 
 -Entity Framework<br>
 -Fluent Api<br>
 -Linq<br>
--Fluent API<br>
 
 <b>Como baixar este projeto?</b><br>
 -git clone https://github.com/guismeiram/Clinica-WebApp<br>
