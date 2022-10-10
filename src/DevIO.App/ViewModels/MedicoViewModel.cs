@@ -1,6 +1,6 @@
 ﻿namespace DevIO.App.ViewModels
 {
-    public class Medico 
+    public class MedicoViewModel 
     {
         public string Id { get; set; }
         public string Nome { get; set; }
@@ -9,9 +9,9 @@
         public string Telefone { get; set; }
         public string Ddd { get; set; }
         // relacionamentos
-        public virtual Endereco Endereco { get; set; }
-        public virtual List<Consulta> Consultas { get; set; }
-        public virtual List<MedicoEspecialidade> Especialidades { get; set; }
+        public virtual EnderecoViewModel Endereco { get; set; }
+        public virtual List<ConsultaViewModel> Consultas { get; set; }
+        public virtual List<MedicoEspecialidadeViewModel> Especialidades { get; set; }
 
     }
 }

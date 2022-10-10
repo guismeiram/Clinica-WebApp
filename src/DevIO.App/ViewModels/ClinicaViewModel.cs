@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevIO.App.ViewModels
 {
-    public class Clinica
+    public class ClinicaViewModel
     {
 
         public string id { get; set; }
@@ -15,10 +15,10 @@ namespace DevIO.App.ViewModels
         public string Ddd { get; set; }
 
         // relacionamentos
-        public virtual List<Consulta> Consultas { get; set; }
+        public virtual List<ConsultaViewModel> Consultas { get; set; }
 
 
-        public virtual Endereco Endereco { get; set; }
+        public virtual EnderecoViewModel Endereco { get; set; }
 
         public String ClinicaId { get; set; }
 

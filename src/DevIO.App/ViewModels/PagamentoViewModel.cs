@@ -1,6 +1,6 @@
 ﻿namespace DevIO.App.ViewModels
 {
-    public enum Pagamento 
+    public enum PagamentoViewModel 
     {
         Dinheiro,
         Cartão

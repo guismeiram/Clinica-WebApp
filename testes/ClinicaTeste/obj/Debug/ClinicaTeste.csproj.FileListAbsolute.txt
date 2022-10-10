@@ -11,16 +11,3 @@ G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\Clinica.Teste\obj\Debug\Clini
 G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\Clinica.Teste\obj\Debug\ClinicaTeste.csproj.CopyComplete
 G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\Clinica.Teste\obj\Debug\Clinica.Teste.dll
 G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\Clinica.Teste\obj\Debug\Clinica.Teste.pdb
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\bin\Debug\Clinica.Teste.dll
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\bin\Debug\Clinica.Teste.pdb
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\bin\Debug\Microsoft.Analytics.Interfaces.dll
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\bin\Debug\Microsoft.Analytics.Types.dll
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\bin\Debug\Microsoft.Analytics.UnitTest.dll
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\bin\Debug\pt-BR\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\obj\Debug\ClinicaTeste.csproj.AssemblyReference.cache
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\obj\Debug\ClinicaTeste.csproj.CoreCompileInputs.cache
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\obj\Debug\ClinicaTeste.csproj.CopyComplete
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\obj\Debug\Clinica.Teste.dll
-G:\TRABALHO\ESTUDOS\Projetos\Clinica-WebApp\testes\ClinicaTeste\obj\Debug\Clinica.Teste.pdb

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevIO.App.ViewModels
 {
-    public class Endereco 
+    public class EnderecoViewModel 
     {
         public string Id { get; set; }
         public int Numero { get; set; }
@@ -18,9 +18,9 @@ namespace DevIO.App.ViewModels
         public string EnderecoId { get; set; }
 
         // relacionamentos
-        public virtual Medico Medico { get; set; }
+        public virtual MedicoViewModel Medico { get; set; }
 
-        public virtual Clinica Clinica { get; set; }
+        public virtual ClinicaViewModel Clinica { get; set; }
 
 
     }

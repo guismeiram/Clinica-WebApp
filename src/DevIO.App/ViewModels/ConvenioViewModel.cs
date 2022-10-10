@@ -1,6 +1,6 @@
 ﻿namespace DevIO.App.ViewModels
 {
-    public class Convenio 
+    public class ConvenioViewModel 
     {
         public string id { get; set; }
         public String Nome { get; set; }
