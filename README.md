@@ -12,6 +12,8 @@ O projeto é feito em c#. E é constituido por camadas com libs no Padrão MVC, 
 <b>O que foi utilizado no projeto?(Este projeto esta começando)</b><br>
 -Entity Framework<br>
 -Fluent Api<br>
+-Linq<br>
+-Fluent API<br>
 
 <b>Como baixar este projeto?</b><br>
 -git clone https://github.com/guismeiram/Clinica-WebApp<br>
@@ -20,3 +22,11 @@ O projeto é feito em c#. E é constituido por camadas com libs no Padrão MVC, 
 -Visual Studio 2022<br>
 -Microsoft Sql Server<br>
 -.NET CORE 6
+
+<b>Como gerar o banco:</b><br>
+-Update-DataBase
+
+<b>Como gerar as Migrations:</b><br>
+-Add-Migration Initial -Verbose -Context ClinicaDbContext
+
+
