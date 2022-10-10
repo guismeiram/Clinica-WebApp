@@ -24,3 +24,8 @@ O projeto é feito em c#. E é constituido por camadas com libs no Padrão MVC, 
 
 <b>Como gerar o banco:</b><br>
 -Update-DataBase
+
+<b>Como gerar o Migrations:</b><br>
+-Add-Migration Initial -Verbose -Context ClinicaDbContext
+
+
