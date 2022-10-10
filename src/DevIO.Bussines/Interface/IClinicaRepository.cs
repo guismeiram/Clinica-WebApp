@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevIO.Bussines.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace DevIO.Bussines.Interface
 {
-    internal class IClinicaRepository
+    public interface IClinicaRepository : IRepository<Clinica>
     {
+        Task<Clinica> ObterClinicaEndereco(String id);
+        Task<Clinica> ObterClinicaConsultaEndereco(String id);
     }
 }

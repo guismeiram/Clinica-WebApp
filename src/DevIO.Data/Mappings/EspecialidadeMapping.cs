@@ -19,6 +19,8 @@ namespace DevIO.Data.Mappings
             builder.HasMany(e => e.Medicos)
                 .WithOne(m => m.Especialidade)
                 .HasForeignKey(m => m.EspecialidadeId);
+
+            
         }
     }
 }

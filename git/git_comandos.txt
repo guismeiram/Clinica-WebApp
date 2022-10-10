@@ -20,3 +20,8 @@ git commit -m "mensagem"
 git branch -M main
 git remote add origin https://github.com/guismeiram/Clinica-WebApp
 git push -u origin main
+
+git add .
+git commit -m "mensagem"
+git pull
+git push
