@@ -1,0 +1,11 @@
+Gera migration detalhada(erros)
+Add-Migration Initial -Verbose -Context ClinicaDbContext
+
+Só gera a migration, sem muitos detalhes
+Add-Migration Initial
+
+Gera o SQL da migration
+Script-Migration
+
+Gera o banco no Banco de dados(SQL Server, Postgres, Oracle...)
+Update-DataBase
