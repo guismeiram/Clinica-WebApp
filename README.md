@@ -2,7 +2,7 @@
 
 <b>App-Clinica é destinado a estudos.</b><br>
 
-O projeto é feito em c#. E é constituido por camadas com libs no Padrão MVC, utilizando Entityframework na camada Data, validações com fluent api(Bussines) e geração e atualização de migrations. Identity para logins e criaçaõ de usúarios. 
+O projeto é feito em c#. E é constituido por camadas com libs no Padrão MVC, utilizando Entityframework na camada Data, validações com fluent api(Bussines) e geração e atualização de migrations. Identity para logins e criaçaõ de usúarios(crud). Razor, scaffold para criação de telas de acordo com os campos.
 
 <b>Este projeto tem objetivo de estudos e graduação de conhecimento.</b><br>
 -DevIO.Bussines: Logica de negocio<br>
