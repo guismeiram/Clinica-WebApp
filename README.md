@@ -2,7 +2,7 @@
 
 <b>App-Clinica é destinado a estudos.</b><br>
 
-O projeto é feito em c#. E é constituido por camadas com libs no Padrão MVC, utilizando Entityframework na camada Data, validações com fluent api(Bussines) e geração e atualização de migrations.<br>
+O projeto é feito em c#. E é constituido por camadas com libs no Padrão MVC, utilizando Entityframework na camada Data, validações com fluent api(Bussines) e geração e atualização de migrations. Identity para logins e criaçaõ de usúarios. 
 
 <b>Este projeto tem objetivo de estudos e graduação de conhecimento.</b><br>
 -DevIO.Bussines: Logica de negocio<br>
@@ -13,6 +13,10 @@ O projeto é feito em c#. E é constituido por camadas com libs no Padrão MVC, 
 -Entity Framework<br>
 -Fluent Api<br>
 -Linq<br>
+-Identity<br>
+-Razor<br>
+-Injeção de Dependencia<br>
+-Automaper<br>
 
 <b>Como baixar este projeto?</b><br>
 -git clone https://github.com/guismeiram/Clinica-WebApp<br>
