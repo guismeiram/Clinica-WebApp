@@ -9,3 +9,8 @@ Script-Migration
 
 Gera o banco no Banco de dados(SQL Server, Postgres, Oracle...)
 Update-DataBase
+
+Serve para quando tem mais de um contexto, assim você o identifica.
+Script-Migration -Context ClinicaDbContext
+
+
