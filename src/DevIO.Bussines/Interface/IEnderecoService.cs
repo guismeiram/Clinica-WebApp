@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace DevIO.Bussines.Interface
 {
-    public interface ITipoPagamentoService : IDisposable
+    public interface IEnderecoService : IDisposable
     {
-        Task Adicionar(TipoPagamento tipoPagamento);
-        Task Atualizar(TipoPagamento tipoPagamento);
+        Task Adicionar(Endereco endereco);
+        Task Atualizar(Endereco endereco);
         Task Remover(String id);
-        Task AtualizarTipoPagamento(TipoPagamento tipoPagamento);
+
+        Task AtualizarEndereco(Endereco endereco);
     }
 }
