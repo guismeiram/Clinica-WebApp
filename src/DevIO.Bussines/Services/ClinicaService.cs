@@ -1,5 +1,6 @@
 ﻿using DevIO.Bussines.Interface;
 using DevIO.Bussines.Models;
+using DevIO.Bussines.Models.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,30 @@ namespace DevIO.Bussines.Services
 {
     public class ClinicaService : BaseService, IClinicaService
     {
-        public ClinicaService(INotificador notificador) : base(notificador)
+        private readonly IConsultaRepository _consultaRepository;
+        private readonly IEnderecoRepository _enderecoRepository;
+        private readonly IClinicaRepository _clinicaRepository;
+
+        public ClinicaService(INotificador notificador, IConsultaRepository consultaRepository, IEnderecoRepository enderecoRepository, IClinicaRepository clinicaRepository) : base(notificador)
         {
+            _consultaRepository = consultaRepository;
+            _enderecoRepository = enderecoRepository;   
+            _clinicaRepository = clinicaRepository;
         }
 
-        public Task Adicionar(Clinica clinica)
+        public async Task Adicionar(Clinica clinica)
         {
-            throw new NotImplementedException();
+            if (   !ExecutarValidacao(new ClinicaValidation(), clinica)
+                || !ExecutarValidacao(new EnderecoValidation(), clinica.Endereco)
+               ) return;
+
+            if (_clinicaRepository.Buscar(f => f.Nome == clinica.Nome).Result.Any())
+            {
+                Notificar("Já existe um fornecedor com este documento infomado.");
+                return;
+            }
+
+            await _clinicaRepository.Adicionar(clinica);
         }
 
         public Task AtualizaClinica(Clinica clinica)

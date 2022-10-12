@@ -11,6 +11,6 @@ namespace DevIO.Bussines.Interface
     {
         Task<Consulta> obterConsultaClinicaPaciente(String id);
         Task<Consulta> obterConsultaClinica(String id);
-        Task<Clinica> ObterConsultaPaciente(String id);
+        Task<Consulta> ObterConsultaPaciente(String id);
     }
 }

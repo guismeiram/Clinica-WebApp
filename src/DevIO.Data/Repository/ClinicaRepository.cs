@@ -1,6 +1,7 @@
 ﻿using DevIO.Bussines.Interface;
 using DevIO.Bussines.Models;
 using DevIO.Data.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +16,19 @@ namespace DevIO.Data.Repository
         {
         }
 
-        public Task<Clinica> ObterClinicaConsultaEndereco(string id)
+        public async Task<Clinica> ObterClinicaConsultaEndereco(string id)
         {
-            throw new NotImplementedException();
+            return await Db.Clinica.AsNoTracking()
+               .Include(c => c.Consultas)
+               .Include(c => c.Endereco)
+               .FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public Task<Clinica> ObterClinicaEndereco(string id)
+        public async Task<Clinica> ObterClinicaEndereco(string id)
         {
-            throw new NotImplementedException();
+            return await Db.Clinica.AsNoTracking()
+               .Include(c => c.Endereco)
+               .FirstOrDefaultAsync(c => c.Id == id);
         }
     }
 }

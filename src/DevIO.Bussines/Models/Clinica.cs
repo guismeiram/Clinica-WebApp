@@ -13,7 +13,7 @@ namespace DevIO.Bussines.Models
         public string Ddd { get; set; }
 
         // relacionamentos
-        public virtual List<Consulta> Consultas { get; set; }
+        public virtual IEnumerable<Consulta> Consultas { get; set; }
 
 
         public virtual Endereco Endereco { get; set; }

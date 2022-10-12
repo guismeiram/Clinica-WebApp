@@ -6,11 +6,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Mappings\o52uc10u.m5f~" />
-	  <None Remove="Mappings\TelefoneMapping.cs~RF5c36c40.TMP" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />

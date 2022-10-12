@@ -9,7 +9,7 @@ namespace DevIO.App.ViewModels
     public class ClinicaViewModel
     {
 
-        public string id { get; set; }
+        public string Id { get; set; }
         public string Nome { get; set; }
         public string Telefone { get; set; }
         public string Ddd { get; set; }
