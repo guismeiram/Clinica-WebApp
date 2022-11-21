@@ -39,6 +39,10 @@ namespace DevIO.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(200)");
 
+            //1 : 1 Medico : Consulta
+            builder.HasOne(e => e.Consultas)
+                .WithOne(m => m.Medico);
+
             builder.ToTable("Medico");
         }
     }

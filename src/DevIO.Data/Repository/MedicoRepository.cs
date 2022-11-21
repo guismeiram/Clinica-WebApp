@@ -15,19 +15,6 @@ namespace DevIO.Data.Repository
         {
         }
 
-        public Task<Medico> ObterMedicoConsultas(string id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Medico> ObterMedicoConsultasEspecialidades(string id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Medico> ObterMedicoEspecialidades(string id)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

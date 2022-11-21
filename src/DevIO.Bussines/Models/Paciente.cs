@@ -15,7 +15,6 @@ namespace DevIO.Bussines.Models
         public Consulta Consulta { get; set; }
         public string Telefone { get; set; }
         public string Ddd { get; set; }
-        public virtual List<PacienteTipoPagamento> PacienteTipoPagamentos { get; set; }
 
 
     }

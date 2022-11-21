@@ -11,30 +11,21 @@ namespace DevIO.Bussines.Services
 {
     public class ClinicaService : BaseService, IClinicaService
     {
-        private readonly IConsultaRepository _consultaRepository;
-        private readonly IEnderecoRepository _enderecoRepository;
         private readonly IClinicaRepository _clinicaRepository;
 
-        public ClinicaService(INotificador notificador, IConsultaRepository consultaRepository, IEnderecoRepository enderecoRepository, IClinicaRepository clinicaRepository) : base(notificador)
+        public ClinicaService(INotificador notificador,  IClinicaRepository clinicaRepository) : base(notificador)
         {
-            _consultaRepository = consultaRepository;
-            _enderecoRepository = enderecoRepository;   
             _clinicaRepository = clinicaRepository;
         }
 
         public async Task Adicionar(Clinica clinica)
         {
-            if (   !ExecutarValidacao(new ClinicaValidation(), clinica)
-                || !ExecutarValidacao(new EnderecoValidation(), clinica.Endereco)
-               ) return;
-
-            if (_clinicaRepository.Buscar(f => f.Nome == clinica.Nome).Result.Any())
-            {
-                Notificar("Já existe um fornecedor com este documento infomado.");
-                return;
-            }
+            if (!ExecutarValidacao(new ClinicaValidation(), clinica) 
+                //|| !ExecutarValidacao(new ConsultaValidation(), clinica.Consultas)
+                ) return;
 
             await _clinicaRepository.Adicionar(clinica);
+
         }
 
         public Task AtualizaClinica(Clinica clinica)
@@ -49,7 +40,7 @@ namespace DevIO.Bussines.Services
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _clinicaRepository?.Dispose();
         }
 
         public Task Remover(Guid id)

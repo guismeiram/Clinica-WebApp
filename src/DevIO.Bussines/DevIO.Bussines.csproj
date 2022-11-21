@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Models\Endereco.cs~RF84c83fa.TMP" />
     <None Remove="Models\ythk4dfn.ryc~" />
+    <None Remove="Services\BaseService.cs~RFd5c910.TMP" />
   </ItemGroup>
 
   <ItemGroup>

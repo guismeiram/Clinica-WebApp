@@ -21,14 +21,12 @@ namespace DevIO.Data.Mappings
             builder.Property(c => c.Ddd)
                 .IsRequired()
                 .HasColumnType("varchar(200)");
+
             //1 : 1 Endereco : Medico
             builder.HasOne(e => e.Consulta)
                 .WithOne(m => m.Paciente);
 
-            //1 : N Convenio : Paciente
-            builder.HasMany(e => e.PacienteTipoPagamentos)
-                .WithOne(m => m.Paciente)
-                .HasForeignKey(m => m.PacienteId);
+         
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DevIO.Bussines.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace DevIO.Data.Context
 {
@@ -14,11 +15,12 @@ namespace DevIO.Data.Context
 
         public DbSet<Clinica> Clinica { get; set; }
         public DbSet<Consulta> Consulta { get; set; }
-        public DbSet<Endereco> Endereco { get; set; }
         public DbSet<Especialidade> Especialidade { get; set; }
         public DbSet<Medico> Medico { get; set; }
         public DbSet<MedicoEspecialidade> MedicoEspecialidade { get; set; }
         public DbSet<Paciente> Paciente { get; set; }
+   
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -31,6 +33,14 @@ namespace DevIO.Data.Context
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ClinicaDbContext).Assembly);
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.Restrict;
+
+            base.OnModelCreating(modelBuilder);
+            var keysProperties = modelBuilder.Model.GetEntityTypes().Select(x => x.FindPrimaryKey()).SelectMany(x => x.Properties);
+            foreach (var property in keysProperties)
+            {
+                property.ValueGenerated = ValueGenerated.OnAdd;
+            }
+
 
             base.OnModelCreating(modelBuilder);
         }

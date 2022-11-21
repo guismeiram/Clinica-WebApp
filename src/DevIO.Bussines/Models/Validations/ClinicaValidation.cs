@@ -13,15 +13,24 @@ namespace DevIO.Bussines.Models.Validations
         public ClinicaValidation()
         {
             RuleFor(c => c.Nome)
-                .NotEmpty().WithMessage("O campo {PropertyName} precisa de um Nome")
+                .NotEmpty()
+                .WithMessage("O campo {PropertyName} precisa de um Nome")
                 .Length(2, 200).WithMessage("O campo {PropertyName} precisa ter entre {MinLength} e {MaxLength} caracteres");
-            
+
+            RuleFor(c => c.Telefone)
+                .NotEmpty()
+                .WithMessage("O campo {PropertyName} precisa de um Nome")
+                .Length(2, 200).WithMessage("O campo {PropertyName} precisa ter entre {MinLength} e {MaxLength} caracteres");
+
+            RuleFor(c => c.Ddd)
+                .NotEmpty()
+                .WithMessage("O campo {PropertyName} precisa de um Nome")
+                .Length(2, 200).WithMessage("O campo {PropertyName} precisa ter entre {MinLength} e {MaxLength} caracteres");
+
+            /*public string Nome { get; set; }
+        public string Telefone { get; set; }
+        public string Ddd { get; set; }*/
         }
-        /* // relacionamentos
-        public virtual List<Consulta> Consultas { get; set; }
 
-        public virtual List<TelefoneClinica> TelefoneClinicas { get; set; }
-
-        public virtual Endereco Endereco { get; set; }*/
     }
 }

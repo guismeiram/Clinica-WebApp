@@ -14,6 +14,8 @@ namespace DevIO.Data.Mappings
         public void Configure(EntityTypeBuilder<Consulta> builder)
         {
             builder.HasKey(prop => prop.Id);
+
+
         }
     }
 }

@@ -15,12 +15,10 @@ namespace DevIO.App.ViewModels
         public string Ddd { get; set; }
 
         // relacionamentos
-        public virtual List<ConsultaViewModel> Consultas { get; set; }
+        public virtual ConsultaViewModel Consultas { get; set; }
 
 
-        public virtual EnderecoViewModel Endereco { get; set; }
 
-        public String ClinicaId { get; set; }
 
     }
 }

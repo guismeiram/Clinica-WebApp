@@ -24,6 +24,7 @@ namespace DevIO.App.Controllers
             _clinicaService = clinicaService;
             _mapper = mapper;
         }
+      
 
         [AllowAnonymous]
         [Route("lista-de-clinicas")]
@@ -32,14 +33,24 @@ namespace DevIO.App.Controllers
             return View(_mapper.Map<IEnumerable<ClinicaViewModel>>(await _clinicaRepository.ObterTodos()));
         }
 
-        [ClaimsAuthorize("clinica", "Adicionar")]
+        /*[AllowAnonymous]
         [Route("novo-clinica")]
+        public async Task<IActionResult> Create()
+        {
+            var clinicaViewModel = await PopularFornecedores(new ClinicaViewModel());
+
+            return View(clinicaViewModel);
+        }*/
+
+        [AllowAnonymous]
+        [Route("nova-clinica")]
         public IActionResult Create()
         {
             return View();
         }
 
-        [ClaimsAuthorize("Clinica", "Adicionar")]
+        //[ClaimsAuthorize("Clinica", "Adicionar")]
+        [AllowAnonymous]
         [Route("nova-clinica")]
         [HttpPost]
         public async Task<IActionResult> Create(ClinicaViewModel clinicaViewModel)
@@ -52,6 +63,32 @@ namespace DevIO.App.Controllers
             if (!OperacaoValida()) return View(clinicaViewModel);
 
             return RedirectToAction("Index");
+        }
+
+        /*[ClaimsAuthorize("Clinica", "Editar")]
+        [Route("atualizar-endereco-clinica/{id:guid}")]
+        public async Task<IActionResult> AtualizarEndereco(string id)
+        {
+            var clinica = await ObterClinicaEndereco(id);
+
+            if (clinica == null)
+            {
+                return NotFound();
+            }
+
+            return PartialView("_AtualizarClinica", new ClinicaViewModel { Endereco = clinica.Endereco });
+        }*/
+
+        /*private async Task<ClinicaViewModel> ObterClinicaEndereco(string id)
+        {
+            return _mapper.Map<ClinicaViewModel>(await _clinicaRepository.ObterClinicaEndereco(id));
+        }*/
+
+
+        private async Task<ClinicaViewModel> PopularFornecedores(ClinicaViewModel clinica)
+        {
+            clinica = _mapper.Map<ClinicaViewModel>(await _clinicaRepository.ObterTodos());
+            return clinica;
         }
     }
 }

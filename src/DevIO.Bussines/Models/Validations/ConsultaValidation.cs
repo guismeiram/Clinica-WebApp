@@ -13,6 +13,7 @@ namespace DevIO.Bussines.Models.Validations
         {
             RuleFor(f => f.Data)
                 .NotEmpty().WithMessage("Data required");
+           
         }
     }
 }

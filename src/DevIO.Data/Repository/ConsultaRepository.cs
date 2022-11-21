@@ -28,6 +28,7 @@ namespace DevIO.Data.Repository
             return await Db.Consulta.AsNoTracking()
                 .Include(c => c.Clinica)
                 .Include(c => c.Paciente)
+                .Include(c => c.Medico)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 

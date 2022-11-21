@@ -1,5 +1,6 @@
 ﻿using DevIO.Bussines.Interface;
 using DevIO.Bussines.Models;
+using DevIO.Bussines.Models.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,18 @@ namespace DevIO.Bussines.Services
 {
     public class ConsultaService : BaseService, IConsultaService
     {
-        public ConsultaService(INotificador notificador) : base(notificador)
+        private readonly IConsultaRepository _consultaRepository;
+
+        public ConsultaService(INotificador notificador, IConsultaRepository consultaRepository) : base(notificador)
         {
+            _consultaRepository = consultaRepository;   
         }
 
-        public Task Adicionar(Consulta consulta)
+        public async Task Adicionar(Consulta consulta)
         {
-            throw new NotImplementedException();
+            if (!ExecutarValidacao(new ConsultaValidation(), consulta)) return;
+
+            await _consultaRepository.Adicionar(consulta);
         }
 
         public Task Atualizar(Consulta consulta)
@@ -31,7 +37,7 @@ namespace DevIO.Bussines.Services
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _consultaRepository?.Dispose();
         }
 
         public Task Remover(Guid id)

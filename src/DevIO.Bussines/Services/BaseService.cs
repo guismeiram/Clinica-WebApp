@@ -3,11 +3,6 @@ using DevIO.Bussines.Models;
 using DevIO.Bussines.Notificacoes;
 using FluentValidation;
 using FluentValidation.Results;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIO.Bussines.Services
 {
@@ -43,5 +38,27 @@ namespace DevIO.Bussines.Services
 
             return false;
         }
+
+
+        /*protected bool ValidateEntity<TV, TE>(TV validacao, TE entidade) where TV : AbstractValidator<TE> where TE : Entity
+        {
+            //do the base DataAnnotations/fluent validation mapping
+            var result = base.ValidateEntity(entityEntry, items);
+
+            //do additional validation for customer
+            var customer = entityEntry.Entity as Customer;
+
+            //could be added or updated (change ShouldValidateEntity to include deleted)
+            if (entityEntry.State == EntityState.Added &&
+                customer != null)
+            {
+                if (customer.FirstName.Contains("\t"))
+                {
+                    result.ValidationErrors.Add(
+                        new DbValidationError("LastName", "Illegal character"));
+                }
+            }
+            return result;
+        }*/
     }
 }

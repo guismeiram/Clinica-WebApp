@@ -9,7 +9,7 @@ namespace DevIO.Bussines.Interface
 {
     public interface IEspecialidadeRepository : IRepository<Especialidade>
     {
-        Task<Especialidade> ObterEspecialidadeMedico(String id);
-        Task<Especialidade> ObterEspecialidade(String id);
+        Task<IEnumerable<Especialidade>> ObterEspecialidadeMedico(string especialidadeId);
+
     }
 }

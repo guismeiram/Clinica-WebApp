@@ -21,6 +21,7 @@ namespace DevIO.Bussines.Models.Validations
             RuleFor(c => c.Crm)
              .NotEmpty().WithMessage("O campo {PropertyName} precisa de um Crm")
              .Length(2, 200).WithMessage("O campo {PropertyName} precisa ter entre {MinLength} e {MaxLength} caracteres");
-        }
+        
+            }
     }
 }

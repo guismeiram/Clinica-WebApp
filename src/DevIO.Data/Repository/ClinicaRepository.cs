@@ -14,21 +14,17 @@ namespace DevIO.Data.Repository
     {
         public ClinicaRepository(ClinicaDbContext db) : base(db)
         {
+
         }
 
-        public async Task<Clinica> ObterClinicaConsultaEndereco(string id)
+        public async Task<IEnumerable<Clinica>> ObterClinicaConsultaEndereco(string id)
         {
-            return await Db.Clinica.AsNoTracking()
-               .Include(c => c.Consultas)
-               .Include(c => c.Endereco)
-               .FirstOrDefaultAsync(c => c.Id == id);
-        }
-
-        public async Task<Clinica> ObterClinicaEndereco(string id)
-        {
-            return await Db.Clinica.AsNoTracking()
-               .Include(c => c.Endereco)
-               .FirstOrDefaultAsync(c => c.Id == id);
+            return await Db.Clinica.Where(c => c.Id == id)
+                .Include(a => a.Consultas)
+                .Include(a => a.Consultas.Medico)
+                .Include(a => a.Consultas.Medico.Especialidades)
+                .Include(a => a.Consultas.Paciente)
+                .ToListAsync();
         }
     }
 }

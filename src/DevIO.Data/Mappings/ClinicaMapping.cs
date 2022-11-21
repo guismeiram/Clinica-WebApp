@@ -15,6 +15,7 @@ namespace DevIO.Data.Mappings
         {
             builder.HasKey(prop => prop.Id);
 
+
             builder.Property(c => c.Telefone)
             .IsRequired()
             .HasColumnType("varchar(200)");
@@ -23,16 +24,14 @@ namespace DevIO.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(200)");
 
-            //1 : N Clinica : Consultas
-            builder.HasMany(e => e.Consultas)
-                .WithOne(m => m.Clinica)
-                .HasForeignKey(m => m.ClinicaId)
-                .OnDelete(DeleteBehavior.Restrict);
+            //1 : 1 Clinica : Consultas
+            builder.HasOne(e => e.Consultas)
+                .WithOne(m => m.Clinica);
+       
 
-            //1 : 1 Clinica : Endereco
+            /*1 : 1 Clinica : Endereco
             builder.HasOne(e => e.Endereco)
-                .WithOne(m => m.Clinica)
-                .HasForeignKey<Endereco>(c => c.EnderecoId);
+                .WithOne(m => m.Clinica);*/
         }
     }
 }

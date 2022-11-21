@@ -9,7 +9,7 @@ namespace DevIO.Bussines.Models
     public class Especialidade : Entity
     {
         public string Nome { get; set; }
-        public virtual List<MedicoEspecialidade> Medicos { get; set; }
+        public virtual IEnumerable<MedicoEspecialidade> Medicos { get; set; }
 
     }
 }

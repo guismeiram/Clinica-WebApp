@@ -16,7 +16,6 @@ namespace DevIO.App.ViewModels
         public ConsultaViewModel Consulta { get; set; }
         public string Telefone { get; set; }
         public string Ddd { get; set; }
-        public virtual List<PacienteTipoPagamentoViewModel> PacienteTipoPagamentos { get; set; }
 
 
     }

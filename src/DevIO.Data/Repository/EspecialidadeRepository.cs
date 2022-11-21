@@ -1,6 +1,7 @@
 ﻿using DevIO.Bussines.Interface;
 using DevIO.Bussines.Models;
 using DevIO.Data.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +16,11 @@ namespace DevIO.Data.Repository
         {
         }
 
-        public Task<Especialidade> ObterEspecialidade(string id)
+        public async Task<IEnumerable<Especialidade>> ObterEspecialidadeMedico(string especialidadeId)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<Especialidade> ObterEspecialidadeMedico(string id)
-        {
-            throw new NotImplementedException();
+            return await Db.Especialidade.Where(a => a.Id == especialidadeId)
+                           .Include(a => a.Medicos)
+                           .ThenInclude(b => b.Especialidade).ToListAsync();
         }
     }
 }

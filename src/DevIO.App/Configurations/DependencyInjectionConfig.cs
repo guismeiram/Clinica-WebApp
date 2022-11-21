@@ -16,23 +16,18 @@ namespace DevIO.App.Configurations
         {
             services.AddScoped<ClinicaDbContext>();
             services.AddScoped<IClinicaRepository, ClinicaRepository>();
-            services.AddScoped<IEnderecoRepository, EnderecoRepository>();
-            services.AddScoped<IConvenioRepository, ConvenioRepository>();
+
             services.AddScoped<IConsultaRepository, ConsultaRepository>();
             services.AddScoped<IEspecialidadeRepository, EspecialidadeRepository>();
             services.AddScoped<IMedicoRepository, MedicoRepository>();
             services.AddScoped<IPacienteRepository, PacienteRepository>();
-            services.AddScoped<ITipoPagamentoRepository, TipoPagamentoRepository>();
-            services.AddSingleton<IValidationAttributeAdapterProvider, MoedaValidationAttributeAdapterProvider>();
 
             services.AddScoped<INotificador, Notificador>();
             services.AddScoped<IClinicaService, ClinicaService>();
             services.AddScoped<IConsultaService, ConsultaService>();
-            services.AddScoped<IConvenioService, ConvenioService>();
-            services.AddScoped<IEnderecoService, EnderecoService>();
+
             services.AddScoped<IMedicoService, MedicoService>();
-            services.AddScoped<IPacienteService, PacienteService>();
-            services.AddScoped<ITipoPagamentoService, TipoPagamentoService>();
+    
          
             return services;
         }

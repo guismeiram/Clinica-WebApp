@@ -13,12 +13,9 @@ namespace DevIO.Bussines.Models
         public string Ddd { get; set; }
 
         // relacionamentos
-        public virtual IEnumerable<Consulta> Consultas { get; set; }
+        public virtual Consulta Consultas { get; set; }
 
 
-        public virtual Endereco Endereco { get; set; }
-
-        public String ClinicaId { get; set; }
 
     }
 }
