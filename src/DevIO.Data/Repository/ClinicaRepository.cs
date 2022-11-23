@@ -17,13 +17,9 @@ namespace DevIO.Data.Repository
 
         }
 
-        public async Task<IEnumerable<Clinica>> ObterClinicaConsultaEndereco(string id)
+        public async Task<IEnumerable<Clinica>> ObterClinica(string id)
         {
             return await Db.Clinica.Where(c => c.Id == id)
-                .Include(a => a.Consultas)
-                .Include(a => a.Consultas.Medico)
-                .Include(a => a.Consultas.Medico.Especialidades)
-                .Include(a => a.Consultas.Paciente)
                 .ToListAsync();
         }
     }

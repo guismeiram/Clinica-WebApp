@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="Models\ythk4dfn.ryc~" />
     <None Remove="Services\BaseService.cs~RFd5c910.TMP" />
+    <None Remove="Services\ClinicaService.cs~RF581dcbe.TMP" />
   </ItemGroup>
 
   <ItemGroup>

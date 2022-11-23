@@ -9,6 +9,6 @@ namespace DevIO.Bussines.Interface
 {
     public interface IClinicaRepository : IRepository<Clinica>
     {
-        Task<IEnumerable<Clinica>> ObterClinicaConsultaEndereco(String id);
+        Task<IEnumerable<Clinica>> ObterClinica(String id);
     }
 }

@@ -33,9 +33,11 @@ namespace DevIO.Bussines.Services
             throw new NotImplementedException();
         }
 
-        public Task Atualizar(Clinica clinica)
+        public async Task Atualizar(Clinica clinica)
         {
-            throw new NotImplementedException();
+            if (!ExecutarValidacao(new ClinicaValidation(), clinica)) return;
+
+            await _clinicaRepository.Atualizar(clinica);
         }
 
         public void Dispose()
@@ -43,9 +45,9 @@ namespace DevIO.Bussines.Services
             _clinicaRepository?.Dispose();
         }
 
-        public Task Remover(Guid id)
+        public async Task Remover(string id)
         {
-            throw new NotImplementedException();
+            await _clinicaRepository.Remover(id);
         }
     }
 }

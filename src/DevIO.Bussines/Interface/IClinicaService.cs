@@ -11,7 +11,7 @@ namespace DevIO.Bussines.Interface
     {
         Task Adicionar(Clinica clinica);
         Task Atualizar(Clinica clinica);
-        Task Remover(Guid id);
+        Task Remover(string id);
 
         Task AtualizaClinica(Clinica clinica);
     }
