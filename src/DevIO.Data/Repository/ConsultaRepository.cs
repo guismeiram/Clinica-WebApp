@@ -19,15 +19,12 @@ namespace DevIO.Data.Repository
         public async Task<Consulta> obterConsultaClinica(string id)
         {
             return await Db.Consulta.AsNoTracking()
-                .Include(c => c.Clinica)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task<Consulta> obterConsultaClinicaPaciente(string id)
         {
             return await Db.Consulta.AsNoTracking()
-                .Include(c => c.Clinica)
-                .Include(c => c.Paciente)
                 .Include(c => c.Medico)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
@@ -35,7 +32,6 @@ namespace DevIO.Data.Repository
         public async Task<Consulta> ObterConsultaPaciente(string id)
         {
             return await Db.Consulta.AsNoTracking()
-                .Include(c => c.Paciente)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
     }

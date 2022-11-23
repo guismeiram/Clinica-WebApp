@@ -13,12 +13,10 @@ namespace DevIO.Data.Context
             ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
-        public DbSet<Clinica> Clinica { get; set; }
         public DbSet<Consulta> Consulta { get; set; }
         public DbSet<Especialidade> Especialidade { get; set; }
         public DbSet<Medico> Medico { get; set; }
         public DbSet<MedicoEspecialidade> MedicoEspecialidade { get; set; }
-        public DbSet<Paciente> Paciente { get; set; }
    
 
 

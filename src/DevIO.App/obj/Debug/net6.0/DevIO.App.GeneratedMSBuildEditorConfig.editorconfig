@@ -19,34 +19,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TRABALHO/ESTUDOS/Projetos/Clinica-WebApp/src/DevIO.App/Views/Clinica/Consulta.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljYVxDb25zdWx0YS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[G:/TRABALHO/ESTUDOS/Projetos/Clinica-WebApp/src/DevIO.App/Views/Clinica/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljYVxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[G:/TRABALHO/ESTUDOS/Projetos/Clinica-WebApp/src/DevIO.App/Views/Clinica/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljYVxEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[G:/TRABALHO/ESTUDOS/Projetos/Clinica-WebApp/src/DevIO.App/Views/Clinica/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljYVxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[G:/TRABALHO/ESTUDOS/Projetos/Clinica-WebApp/src/DevIO.App/Views/Clinica/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljYVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[G:/TRABALHO/ESTUDOS/Projetos/Clinica-WebApp/src/DevIO.App/Views/Clinica/Medico.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljYVxNZWRpY28uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[G:/TRABALHO/ESTUDOS/Projetos/Clinica-WebApp/src/DevIO.App/Views/Clinica/Paciente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljYVxQYWNpZW50ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [G:/TRABALHO/ESTUDOS/Projetos/Clinica-WebApp/src/DevIO.App/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
