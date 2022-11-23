@@ -19,7 +19,7 @@ e geração e atualização de migrations. Identity para logins e criaçaõ de u
 -Automaper<br>
 
 <b>Como baixar este projeto?</b><br>
--git clone https://github.com/guismeiram/Clinica_FULLSTACK<br>
+-git clone https://github.com/guismeiram/Clinica-WebApp<br>
 
 <b>Ferramentas para teste ou codificação:</b><br>
 -Visual Studio 2022<br>
