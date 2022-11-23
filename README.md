@@ -15,7 +15,6 @@ e geração e atualização de migrations. Identity para logins e criaçaõ de u
 -Fluent Api<br>
 -Linq<br>
 -Identity<br>
--Angular<br>
 -Injeção de Dependencia<br>
 -Automaper<br>
 
