@@ -16,23 +16,13 @@ namespace DevIO.Data.Repository
         {
         }
 
-        public async Task<Consulta> obterConsultaClinica(string id)
+        public async Task<Consulta> obterConsultaMedico(string id)
         {
             return await Db.Consulta.AsNoTracking()
-                .FirstOrDefaultAsync(c => c.Id == id);
+                           .Include(c => c.Medico)
+                           .FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public async Task<Consulta> obterConsultaClinicaPaciente(string id)
-        {
-            return await Db.Consulta.AsNoTracking()
-                .Include(c => c.Medico)
-                .FirstOrDefaultAsync(c => c.Id == id);
-        }
-
-        public async Task<Consulta> ObterConsultaPaciente(string id)
-        {
-            return await Db.Consulta.AsNoTracking()
-                .FirstOrDefaultAsync(c => c.Id == id);
-        }
+       
     }
 }
