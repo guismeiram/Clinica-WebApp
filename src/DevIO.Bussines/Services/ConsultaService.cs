@@ -12,15 +12,30 @@ namespace DevIO.Bussines.Services
     public class ConsultaService : BaseService, IConsultaService
     {
         private readonly IConsultaRepository _consultaRepository;
+        private readonly IMedicoRepository _medicoRepository;
+        private readonly IClinicaRepository _clinicaRepository;
 
-        public ConsultaService(INotificador notificador, IConsultaRepository consultaRepository) : base(notificador)
+
+        public ConsultaService(INotificador notificador, IConsultaRepository consultaRepository, IMedicoRepository medicoRepository, IClinicaRepository clinicaRepository) : base(notificador)
         {
-            _consultaRepository = consultaRepository;   
+            _consultaRepository = consultaRepository;  
+            _medicoRepository = medicoRepository;
+            _clinicaRepository = clinicaRepository;
         }
 
         public async Task Adicionar(Consulta consulta)
         {
-            if (!ExecutarValidacao(new ConsultaValidation(), consulta)) return;
+            if (!ExecutarValidacao(new ConsultaValidation(), consulta)
+                || !ExecutarValidacao(new ClinicaValidation(), consulta.Clinicas)) 
+                    if(!ExecutarValidacao(new MedicoValidation(), consulta.Medicos))
+                    return;
+                return;
+
+            if (_consultaRepository.Buscar(f => f.Id == consulta.Id).Result.Any())
+            {
+                Notificar("Já existe um ID infomado.");
+                return;
+            }
 
             await _consultaRepository.Adicionar(consulta);
         }
@@ -30,17 +45,17 @@ namespace DevIO.Bussines.Services
             throw new NotImplementedException();
         }
 
-        public Task AtualizarEndereco(Consulta consulta)
-        {
-            throw new NotImplementedException();
-        }
-
+       
         public void Dispose()
         {
             _consultaRepository?.Dispose();
+            _medicoRepository?.Dispose();
+            _clinicaRepository?.Dispose();
         }
 
-        public Task Remover(Guid id)
+       
+
+        public Task Remover(string id)
         {
             throw new NotImplementedException();
         }

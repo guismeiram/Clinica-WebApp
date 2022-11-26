@@ -1,6 +1,7 @@
 ﻿using DevIO.Bussines.Interface;
 using DevIO.Bussines.Models;
 using DevIO.Data.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,9 @@ namespace DevIO.Data.Repository
         {
         }
 
-       
+        public Task<Medico> obterMedicoConsulta(string id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

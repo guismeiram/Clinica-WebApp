@@ -8,8 +8,7 @@
         public string Telefone { get; set; }
         public string Ddd { get; set; }
         // relacionamentos
-        public virtual Consulta Consultas { get; set; }
-        public virtual IEnumerable<MedicoEspecialidade> Especialidades { get; set; }
+        public virtual List<Consulta> Consultas { get; set; }
 
        
     }

@@ -11,8 +11,6 @@ namespace DevIO.Bussines.Interface
     {
 
         Task<Consulta> obterConsultaMedico(string id);
-
-        
-   
+        Task<List<Consulta>> obterConsultaMedicoClinica();
     }
 }

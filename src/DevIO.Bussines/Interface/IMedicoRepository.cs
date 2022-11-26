@@ -9,7 +9,8 @@ namespace DevIO.Bussines.Interface
 {
     public interface IMedicoRepository : IRepository<Medico>
     {
-      
+
+        Task<Medico> obterMedicoConsulta(string id);
 
 
     }

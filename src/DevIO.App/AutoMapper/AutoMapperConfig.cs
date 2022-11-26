@@ -9,9 +9,8 @@ namespace DevIO.App.AutoMapper
         public AutoMapperConfig()
         {
             CreateMap<Consulta, ConsultaViewModel>().ReverseMap();
-            CreateMap<Especialidade, EspecialidadeViewModel>().ReverseMap();
+            CreateMap<Clinica, ClinicaViewModel>().ReverseMap();
             CreateMap<Medico, MedicoViewModel>().ReverseMap();
-            CreateMap<MedicoEspecialidade, MedicoEspecialidadeViewModel>().ReverseMap();
          
 
         }

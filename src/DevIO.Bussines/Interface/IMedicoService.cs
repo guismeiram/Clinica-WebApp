@@ -12,6 +12,5 @@ namespace DevIO.Bussines.Interface
         Task Adicionar(Medico medico);
         Task Atualizar(Medico medico);
         Task Remover(String id);
-        Task AtualizarMedico(Medico medico);
     }
 }

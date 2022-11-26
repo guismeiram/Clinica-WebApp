@@ -33,12 +33,8 @@ namespace DevIO.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(50)");
 
+        
 
-            builder.Property(c => c.TelefoneClinica)
-                .IsRequired()
-                .HasColumnType("varchar(200)");
-
-            
         }
     }
 }

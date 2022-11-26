@@ -7,9 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Interface\IConsultaRepository.cs~RFf08a6e.TMP" />
+    <None Remove="Models\Medico.cs~RF2523ef4.TMP" />
     <None Remove="Models\ythk4dfn.ryc~" />
     <None Remove="Services\BaseService.cs~RFd5c910.TMP" />
     <None Remove="Services\ClinicaService.cs~RF581dcbe.TMP" />
+    <None Remove="Services\ConsultaService.cs~RFd17508.TMP" />
   </ItemGroup>
 
   <ItemGroup>

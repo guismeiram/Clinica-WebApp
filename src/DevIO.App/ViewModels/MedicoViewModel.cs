@@ -9,8 +9,7 @@
         public string Telefone { get; set; }
         public string Ddd { get; set; }
         // relacionamentos
-        public virtual ConsultaViewModel Consultas { get; set; }
-        public virtual List<MedicoEspecialidadeViewModel> Especialidades { get; set; }
+        public virtual List<ConsultaViewModel> Consultas { get; set; }
 
     }
 }

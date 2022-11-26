@@ -21,6 +21,8 @@ builder.Services.AddMvcConfiguration();
 
 builder.Services.ResolveDependencies();
 
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
 var app = builder.Build();
 
 // Configure

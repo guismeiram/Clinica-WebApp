@@ -26,11 +26,6 @@ namespace DevIO.Data.Mappings
             builder.Property(c => c.Crm)
                 .HasColumnType("varchar(250)");
 
-            //1 : N Medico : Especialidades
-            builder.HasMany(e => e.Especialidades)
-                .WithOne(m => m.Medico)
-                .HasForeignKey(m => m.MedicoId);
-
             builder.Property(c => c.Telefone)
                 .IsRequired()
                 .HasColumnType("varchar(200)");
@@ -39,9 +34,11 @@ namespace DevIO.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(200)");
 
-            //1 : 1 Medico : Consulta
-            builder.HasOne(e => e.Consultas)
-                .WithOne(m => m.Medico);
+
+            // 1 : N => Consultas : Clinicas
+            builder.HasMany(f => f.Consultas)
+                .WithOne(p => p.Medicos)
+                .HasForeignKey(p => p.MedicoId);
 
             builder.ToTable("Medico");
         }
